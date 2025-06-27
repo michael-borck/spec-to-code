@@ -23,13 +23,13 @@
   ],
   "author": "Dev Blueprint Contributors",
   "license": "MIT",
-  "homepage": "https://github.com/your-username/dev-blueprint#readme",
+  "homepage": "https://github.com/michael-borck/dev-blueprint#readme",
   "bugs": {
-    "url": "https://github.com/your-username/dev-blueprint/issues"
+    "url": "https://github.com/michael-borck/dev-blueprint/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/your-username/dev-blueprint.git"
+    "url": "https://github.com/michael-borck/dev-blueprint.git"
   },
   "files": [
     "src/",

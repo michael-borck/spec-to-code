@@ -206,7 +206,7 @@ claude-code
 ### 1. Clone and Build
 ```bash
 # Clone Dev Blueprint
-git clone https://github.com/your-username/dev-blueprint.git
+git clone https://github.com/michael-borck/dev-blueprint.git
 cd dev-blueprint
 
 # Build all prompt formats
@@ -276,5 +276,5 @@ We simplified and enhanced these concepts to create a more systematic, multi-pla
 
 See [ACKNOWLEDGMENTS.md](ACKNOWLEDGMENTS.md) for complete attribution and licensing information.
 
-[![GitHub Stars](https://img.shields.io/github/stars/your-username/dev-blueprint?style=social)](https://github.com/your-username/dev-blueprint)
+[![GitHub Stars](https://img.shields.io/github/stars/michael-borck/dev-blueprint?style=social)](https://github.com/michael-borck/dev-blueprint)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
