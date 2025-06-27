@@ -1,0 +1,50 @@
+{
+  "name": "dev-blueprint",
+  "version": "1.0.0",
+  "description": "Systematic methodology for AI-assisted software development. Forked from ai-dev-tasks with multi-platform enhancements.",
+  "main": "build-prompts.js",
+  "scripts": {
+    "build": "node build-prompts.js",
+    "build:watch": "node build-prompts.js --watch",
+    "validate": "node validate-prompts.js",
+    "clean": "rm -rf prompts/cursor/*.mdc prompts/universal/*.md prompts/plaintext/*.txt",
+    "mcp": "node mcp-server.js",
+    "mcp:install": "npm install @modelcontextprotocol/sdk",
+    "mcp:test": "node test-mcp.js"
+  },
+  "keywords": [
+    "ai",
+    "development",
+    "prompts",
+    "prd",
+    "tasks",
+    "systematic",
+    "methodology"
+  ],
+  "author": "Dev Blueprint Contributors",
+  "license": "MIT",
+  "homepage": "https://github.com/your-username/dev-blueprint#readme",
+  "bugs": {
+    "url": "https://github.com/your-username/dev-blueprint/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/dev-blueprint.git"
+  },
+  "files": [
+    "src/",
+    "prompts/",
+    "templates/",
+    "examples/",
+    "integrations/",
+    "build-prompts.js",
+    "mcp-server.js",
+    "README.md",
+    "USAGE.md",
+    "BUILD.md",
+    "MCP-SETUP.md",
+    "CONTRIBUTING.md",
+    "ACKNOWLEDGMENTS.md",
+    "LICENSE"
+  ]
+}
