@@ -1,280 +1,233 @@
-# Dev Blueprint
+# 🚀 Spec-to-Code
 
-> Blueprint your way to better software
+**Claude Code Custom Commands for Systematic AI-Assisted Software Development**
 
-**Dev Blueprint** is a systematic methodology for AI-assisted software development that transforms ideas into high-quality, well-documented implementations through structured workflows.
-
-## 🎯 What is Dev Blueprint?
-
-Dev Blueprint provides a three-phase approach to systematic software development:
-
-1. **📋 PRD Creation** - Transform ideas into comprehensive Product Requirements Documents
-2. **📝 Task Generation** - Break down PRDs into actionable, estimated task lists  
-3. **⚡ Systematic Implementation** - Execute tasks with built-in quality checkpoints
-
-This methodology prevents common AI development pitfalls like scope creep, missing requirements, and inconsistent implementation while ensuring professional-grade documentation and testing.
+Spec-to-Code provides Claude Code with powerful slash commands that implement a structured 3-phase methodology: **PRD Creation → Task Generation → Implementation**. Transform feature ideas into high-quality implementations with systematic guidance.
 
 ## 🚀 Quick Start
 
-### 1. Choose Your AI Tool
-
-Dev Blueprint works with any AI coding assistant:
-
-- **🎯 Cursor:** Use `.mdc` files from `prompts/cursor/`
-- **💻 Claude Code CLI:** Use `.md` files from `prompts/universal/`  
-- **🌊 Windsurf:** Use `.md` files from `prompts/universal/`
-- **💬 Chat Interfaces:** Use `.md` or `.txt` files from `prompts/universal/` or `prompts/plaintext/`
-- **🔗 MCP Integration:** Direct AI assistant integration via Model Context Protocol
-
-### 2. Basic Workflow
+### Installation
 
 ```bash
-# 1. Create a PRD for your feature idea
-"I want to add user authentication to my app"
-→ Comprehensive PRD with requirements, risks, timeline
-
-# 2. Generate actionable tasks  
-"Generate tasks from my PRD"
-→ Detailed task breakdown with effort estimates
-
-# 3. Implement systematically
-"Implement these tasks following Dev Blueprint protocol"
-→ Step-by-step implementation with quality checkpoints
+npm install -g spec-to-code
 ```
 
-### 3. Example: Adding Dark Mode
+The commands will be automatically installed to your Claude Code during npm install.
 
-**Phase 1: PRD Creation**
+### Available Commands
+
+Once installed, use these commands in Claude Code:
+
+| Command | Usage | Description |
+|---------|-------|-------------|
+| `/create-prd` | `/create-prd user authentication system` | Create a Product Requirements Document |
+| `/generate-tasks` | `/generate-tasks tasks/prd-user-auth.md` | Generate task list from PRD |
+| `/implement-tasks` | `/implement-tasks tasks/tasks-prd-user-auth.md` | Systematic implementation guide |
+
+### Basic Workflow
+
+1. **Create PRD** (Phase 1)
+   ```
+   /create-prd user dashboard with analytics
+   ```
+   Follow Claude's guidance to create `tasks/prd-user-dashboard.md`
+
+2. **Generate Tasks** (Phase 2)
+   ```
+   /generate-tasks tasks/prd-user-dashboard.md
+   ```
+   Creates `tasks/tasks-prd-user-dashboard.md` with detailed task breakdown
+
+3. **Implement** (Phase 3)
+   ```
+   /implement-tasks tasks/tasks-prd-user-dashboard.md
+   ```
+   Follow systematic implementation with quality checkpoints
+
+## 🏗️ 3-Phase Methodology
+
+### Phase 1: Create PRD (`/create-prd`)
+**Transform ideas into comprehensive requirements**
+
+- **Guided Requirements Gathering**: Claude asks clarifying questions to understand your feature completely
+- **Structured Documentation**: Creates PRD with goals, user stories, functional requirements, scope, dependencies
+- **Quality Checkpoints**: Ensures requirements are clear and actionable
+- **Output**: `tasks/prd-[feature].md`
+
+#### Example Usage:
 ```
-User: "I want to add dark mode to my web app"
-
-AI: "I'll create a PRD for dark mode. Let me ask some clarifying questions:
-- What problem does dark mode solve for your users?
-- Should this be a simple toggle or multiple theme options?
-- Are there existing design guidelines?"
-
-→ Results in comprehensive PRD saved as prd-dark-mode.md
-```
-
-**Phase 2: Task Generation**  
-```
-AI: "Based on your PRD, here are the high-level tasks:
-- [ ] 1.0 Create dark theme color system [Effort: M] [Priority: High]
-- [ ] 2.0 Build theme toggle component [Effort: M] [Priority: High]  
-- [ ] 3.0 Implement user preference storage [Effort: S] [Priority: Medium]
-
-Ready to generate sub-tasks? Respond with 'Go' to proceed."
-
-→ Results in detailed task list saved as tasks-dark-mode.md
-```
-
-**Phase 3: Implementation**
-```
-AI: "I'll implement task 1.1: Define dark mode color palette
-
-[Creates CSS custom properties]
-
-Progress Update:
-- Completed: 1/12 tasks (8% complete)
-- Current: 1.1 Define color palette [COMPLETED]
-- Next: 1.2 Create CSS variables
-
-Should I proceed with task 1.2? (yes/y to continue)"
-
-→ Systematic implementation with progress tracking
-```
-
-## 📁 Project Structure
-
-```
-dev-blueprint/
-├── src/                     # Single source of truth (edit these)
-│   ├── 1-create-prd.md
-│   ├── 2-generate-tasks.md
-│   └── 3-process-task-list.md
-├── prompts/                 # Generated formats (do not edit)
-│   ├── cursor/              # .mdc files for Cursor IDE
-│   ├── universal/           # .md files for general use  
-│   └── plaintext/           # .txt files for basic chat
-├── templates/               # Example PRDs and task lists
-├── examples/                # Complete workflow demonstrations
-├── integrations/            # Tool-specific guides
-├── build-prompts.js         # Build system for prompt formats
-└── BUILD.md                 # Build instructions
+/create-prd social media integration for user profiles
 ```
 
-## 🎯 Key Features
+### Phase 2: Generate Tasks (`/generate-tasks`)
+**Break PRDs into actionable task lists**
 
-### ✅ Comprehensive PRD Generation
-- **Problem Definition:** Clear articulation of user needs
-- **Requirements Analysis:** Functional and non-functional requirements
-- **Risk Assessment:** Technical and business risk identification
-- **Timeline Planning:** Phased delivery approach
-- **Accessibility:** WCAG compliance considerations
+- **High-Level Planning**: Creates 5-7 main parent tasks
+- **Detailed Breakdown**: Breaks each parent task into specific sub-tasks
+- **Effort Estimation**: Provides effort estimates (Small/Medium/Large)
+- **File Identification**: Lists files that need to be created or modified
+- **Output**: `tasks/tasks-[prd-name].md`
 
-### ✅ Smart Task Breakdown
-- **Effort Estimation:** S/M/L sizing for planning
-- **Dependency Tracking:** Prerequisites and task ordering
-- **Definition of Done:** Clear completion criteria
-- **Testing Strategy:** Unit, integration, and E2E test planning
-
-### ✅ Quality-Focused Implementation  
-- **Progressive Execution:** One task at a time with approval gates
-- **Progress Tracking:** Real-time status updates
-- **Rollback Protocol:** Handle blockers and failures gracefully
-- **Code Review Checkpoints:** Quality verification before completion
-
-## 🛠️ Tool Integration
-
-### Cursor IDE
-```bash
-# Auto-applying rules with .mdc files
-cp prompts/cursor/*.mdc .cursor-rules/
+#### Example Usage:
 ```
-[📖 Full Cursor Guide](integrations/cursor-guide.md)
-
-### Claude Code CLI
-```bash
-# Terminal-based systematic development
-claude-code
-> Please read dev-blueprint/1-create-prd.md and follow that process
-```
-[📖 Full Claude Code Guide](integrations/claude-code-guide.md)
-
-### Windsurf (Codeium)
-```bash
-# Context-aware development with codebase understanding
-> Please read dev-blueprint/1-create-prd.md and create a PRD for...
-```
-[📖 Full Windsurf Guide](integrations/windsurf-guide.md)
-
-### Chat Interfaces
-```bash
-# Works with ChatGPT, Claude Web, Perplexity, etc.
-# Copy/paste prompts from prompts/universal/ or prompts/plaintext/
-```
-[📖 Chat Interface Guide](examples/chat-interface-usage.md)
-
-## 📚 Examples & Templates
-
-### 🎨 Real Examples
-- [Complete Workflow: Dark Mode Feature](examples/complete-workflow-example.md)
-- [Chat Interface Usage Patterns](examples/chat-interface-usage.md)
-
-### 📋 Templates
-- [Example PRD: User Profile Editing](templates/example-prd.md)
-- [Example Task List: Profile Feature](templates/example-task-list.md)
-
-## 🎯 Why Dev Blueprint?
-
-### ❌ Without Dev Blueprint
-- **Vague Requirements:** "Add a search feature" → unclear scope
-- **Scope Creep:** Features grow without bounds during development  
-- **Inconsistent Quality:** Some parts well-tested, others fragile
-- **Poor Documentation:** Implementation details lost over time
-- **Technical Debt:** Quick fixes without systematic approach
-
-### ✅ With Dev Blueprint  
-- **Clear Requirements:** Comprehensive PRDs with success criteria
-- **Controlled Scope:** Explicit goals and non-goals defined upfront
-- **Consistent Quality:** Built-in testing and review checkpoints
-- **Professional Documentation:** PRDs and task lists for stakeholders
-- **Systematic Approach:** Methodical implementation with progress tracking
-
-## 📈 Benefits
-
-### For Developers
-- **Reduced Context Switching:** Clear next steps always available
-- **Quality Assurance:** Built-in testing and review processes
-- **Progress Visibility:** Always know project status and remaining work
-- **Documentation:** Professional artifacts for code reviews and handoffs
-
-### For Teams  
-- **Stakeholder Communication:** PRDs provide clear project scope
-- **Work Distribution:** Task lists enable parallel development
-- **Quality Standards:** Consistent implementation across team members
-- **Knowledge Transfer:** Comprehensive documentation for onboarding
-
-### For Projects
-- **Risk Mitigation:** Early identification of technical and business risks
-- **Timeline Accuracy:** Effort estimates and dependency tracking
-- **Scope Control:** Clear boundaries prevent feature creep
-- **Maintainability:** Well-documented, tested, accessible code
-
-## 🚀 Getting Started
-
-### 1. Clone and Build
-```bash
-# Clone Dev Blueprint
-git clone https://github.com/michael-borck/dev-blueprint.git
-cd dev-blueprint
-
-# Build all prompt formats
-npm run build
-
-# Optional: Set up MCP server for AI assistant integration
-npm run mcp:install
+/generate-tasks tasks/prd-social-media-integration.md
 ```
 
-### 2. Try the Basic Workflow
-Choose your preferred AI tool and follow the integration guide. Start with a simple feature request and experience the full workflow.
+### Phase 3: Implement Tasks (`/implement-tasks`)
+**Systematic implementation with quality focus**
 
-### 3. Explore Examples
-- Read through [Complete Workflow Example](examples/complete-workflow-example.md)
-- Review the [Example PRD](templates/example-prd.md) and [Task List](templates/example-task-list.md)
-- Try the workflow with your own feature ideas
+- **Structured Approach**: Step-by-step implementation guidance
+- **Quality Standards**: Built-in code quality, testing, and documentation checkpoints
+- **Best Practices**: Security, performance, and maintainability considerations
+- **Progress Tracking**: Systematic task completion and progress monitoring
 
-### 4. Integrate with Your Tools
-- **Cursor Users:** Follow the [Cursor Integration Guide](integrations/cursor-guide.md)
-- **CLI Users:** Try the [Claude Code Guide](integrations/claude-code-guide.md)  
-- **IDE Users:** Check out the [Windsurf Guide](integrations/windsurf-guide.md)
-- **Chat Users:** Use the [Chat Interface Guide](examples/chat-interface-usage.md)
-- **MCP Users:** See the [MCP Setup Guide](MCP-SETUP.md) for direct AI assistant integration
+#### Example Usage:
+```
+/implement-tasks tasks/tasks-prd-social-media-integration.md
+```
 
-## 📖 Documentation
+## 📁 File Structure
 
-- **[Usage Guide](USAGE.md)** - Detailed multi-platform instructions
-- **[Examples](EXAMPLES.md)** - Real-world scenarios and use cases
-- **[Build Guide](BUILD.md)** - How to build and maintain prompt formats
-- **[MCP Setup](MCP-SETUP.md)** - Model Context Protocol server integration
-- **[Contributing](CONTRIBUTING.md)** - How to improve Dev Blueprint
-- **[Acknowledgments](ACKNOWLEDGMENTS.md)** - Attribution and licensing information
+Spec-to-Code creates and uses this structure in your project:
+
+```
+your-project/
+├── tasks/                              # Spec-to-Code workspace
+│   ├── prd-[feature].md               # Product Requirements Documents
+│   ├── tasks-[prd-name].md            # Generated task lists
+│   ├── implementation-[feature].md     # Implementation notes (optional)
+│   └── README.md                      # Workflow guidance
+└── [your existing project files...]
+```
+
+## ✨ Key Benefits
+
+### 🎯 For Developers
+- **Systematic Approach**: No more ad-hoc development - every feature starts with clear requirements
+- **Complete Planning**: PRDs prevent scope creep and missed functionality
+- **Quality Focus**: Built-in checkpoints ensure robust, maintainable code
+- **Documentation**: Comprehensive docs throughout the development process
+
+### 🤖 For AI Development
+- **Optimized for Claude**: Commands are specifically designed for AI-assisted development
+- **Clear Context**: Structured information dramatically improves AI responses
+- **Consistent Process**: Same methodology across all features and projects
+- **Quality Guardrails**: Built-in best practices and validation steps
+
+### 👥 For Teams
+- **Shared Methodology**: Consistent approach across all team members
+- **Knowledge Transfer**: Complete documentation aids collaboration
+- **Project Visibility**: Clear requirements and progress tracking
+- **Quality Assurance**: Systematic approach reduces bugs and technical debt
+
+## 🔧 Command Details
+
+### `/create-prd [feature description]`
+
+**Purpose**: Create comprehensive Product Requirements Document
+
+**Process**:
+1. Analyzes your feature description
+2. Asks targeted clarifying questions about requirements, users, goals
+3. Generates structured PRD with all necessary sections
+4. Saves as `tasks/prd-[feature-name].md`
+
+**Best Practices**:
+- Provide a clear, concise feature description
+- Be thorough when answering clarifying questions
+- Review the generated PRD before proceeding to tasks
+
+### `/generate-tasks [prd-file-path]`
+
+**Purpose**: Break down PRD into actionable development tasks
+
+**Process**:
+1. Analyzes the specified PRD file thoroughly
+2. Creates high-level parent tasks (5-7 main areas)
+3. Waits for your confirmation ("Go") before proceeding
+4. Breaks down each parent task into specific sub-tasks
+5. Provides effort estimates and identifies relevant files
+6. Saves as `tasks/tasks-[prd-name].md`
+
+**Best Practices**:
+- Always reference the complete file path to your PRD
+- Review high-level tasks before saying "Go"
+- Use the generated task list as your implementation roadmap
+
+### `/implement-tasks [task-file-path]`
+
+**Purpose**: Guide systematic, quality-focused implementation
+
+**Process**:
+1. Analyzes your task list and project context
+2. Provides step-by-step implementation guidance
+3. Includes quality checkpoints for code, testing, documentation
+4. Emphasizes security, performance, and maintainability
+5. Tracks progress and implementation decisions
+
+**Best Practices**:
+- Follow the systematic approach - don't skip steps
+- Complete testing and validation for each task
+- Document important implementation decisions
+- Update the task list with progress
+
+## 🛠️ Advanced Usage
+
+### Custom File Naming
+- PRDs: Use descriptive kebab-case names (`prd-user-authentication.md`)
+- Task Lists: Follow the pattern (`tasks-prd-user-authentication.md`)
+- Keep naming consistent for easy reference
+
+### Integration with Existing Projects
+- Works with any project structure and technology stack
+- Adapts to your existing coding patterns and conventions
+- Integrates with your current testing and deployment workflows
+
+### Team Collaboration
+- Share PRDs and task lists with team members
+- Use version control to track methodology artifacts
+- Reference previous PRDs and task lists for consistency
 
 ## 🤝 Contributing
 
-We welcome contributions! Dev Blueprint improves through community feedback and enhancements.
+This project builds upon excellent prior work:
+- **ai-dev-tasks** by snarktank (methodology foundation)
+- **claude-task-master** by eyaltoledano (workflow inspiration)
 
-- **Prompt Improvements:** Enhance the methodology prompts
-- **Integration Guides:** Add support for new AI tools
-- **Examples:** Share successful workflow examples  
-- **Templates:** Contribute PRD and task list templates
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
+Contributions welcome! The methodology is designed to be extensible and adaptable.
 
 ## 📄 License
 
-MIT License - feel free to use Dev Blueprint in your projects and organizations.
+MIT License - see [LICENSE](LICENSE) file for details.
 
-## 🌟 Community
+## 🆘 Support
 
-- **GitHub Issues:** Report bugs and request features
-- **Discussions:** Share workflows and ask questions  
-- **Pull Requests:** Contribute improvements
+- **Issues**: [GitHub Issues](https://github.com/michael-borck/spec-to-code/issues)
+- **Command Help**: Use `/help` in Claude Code to see all available commands
+- **Methodology Guide**: Check `tasks/README.md` after installation
 
 ---
 
-**Dev Blueprint** transforms chaotic AI-assisted development into systematic, high-quality software delivery. Start building better software today!
+## 🎯 Example Complete Workflow
 
-## 🙏 Acknowledgments
+```
+# Phase 1: Requirements
+/create-prd real-time chat system with message history
 
-Dev Blueprint builds upon excellent work from the open source community:
+# Claude asks clarifying questions, you provide answers
+# Result: tasks/prd-real-time-chat.md
 
-- **Forked from:** [ai-dev-tasks](https://github.com/snarktank/ai-dev-tasks) by snarktank (MIT License)
-- **Inspired by:** [claude-task-master](https://github.com/eyaltoledano/claude-task-master) by eyaltoledano
+# Phase 2: Planning
+/generate-tasks tasks/prd-real-time-chat.md
 
-We simplified and enhanced these concepts to create a more systematic, multi-platform approach to AI-assisted development.
+# Claude creates high-level tasks, you confirm with "Go"
+# Result: tasks/tasks-prd-real-time-chat.md
 
-See [ACKNOWLEDGMENTS.md](ACKNOWLEDGMENTS.md) for complete attribution and licensing information.
+# Phase 3: Implementation
+/implement-tasks tasks/tasks-prd-real-time-chat.md
 
-[![GitHub Stars](https://img.shields.io/github/stars/michael-borck/dev-blueprint?style=social)](https://github.com/michael-borck/dev-blueprint)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+# Claude guides systematic implementation with quality focus
+# Result: High-quality feature implementation with full documentation
+```
+
+**🚀 Ready to transform specs into code with AI!**

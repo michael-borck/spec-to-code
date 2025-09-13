@@ -1,50 +1,44 @@
 {
-  "name": "dev-blueprint",
+  "name": "spec-to-code",
   "version": "1.0.0",
-  "description": "Systematic methodology for AI-assisted software development. Forked from ai-dev-tasks with multi-platform enhancements.",
-  "main": "build-prompts.js",
+  "description": "Claude Code custom commands for systematic AI-assisted software development with 3-phase methodology (PRD → Tasks → Implementation)",
+  "main": "install.js",
   "scripts": {
-    "build": "node build-prompts.js",
-    "build:watch": "node build-prompts.js --watch",
-    "validate": "node validate-prompts.js",
-    "clean": "rm -rf prompts/cursor/*.mdc prompts/universal/*.md prompts/plaintext/*.txt",
-    "mcp": "node mcp-server.js",
-    "mcp:install": "npm install @modelcontextprotocol/sdk",
-    "mcp:test": "node test-mcp.js"
+    "postinstall": "node install.js",
+    "test": "echo \"No tests specified\" && exit 0"
   },
   "keywords": [
     "ai",
     "development",
-    "prompts",
+    "slash-commands",
+    "methodology",
     "prd",
     "tasks",
     "systematic",
-    "methodology"
+    "claude-code",
+    "ai-assisted",
+    "specification"
   ],
-  "author": "Dev Blueprint Contributors",
+  "author": "Spec-to-Code Contributors",
   "license": "MIT",
-  "homepage": "https://github.com/michael-borck/dev-blueprint#readme",
+  "homepage": "https://github.com/michael-borck/spec-to-code#readme",
   "bugs": {
-    "url": "https://github.com/michael-borck/dev-blueprint/issues"
+    "url": "https://github.com/michael-borck/spec-to-code/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/michael-borck/dev-blueprint.git"
+    "url": "https://github.com/michael-borck/spec-to-code.git"
   },
   "files": [
-    "src/",
-    "prompts/",
-    "templates/",
-    "examples/",
-    "integrations/",
-    "build-prompts.js",
-    "mcp-server.js",
+    "commands/",
+    "install.js",
     "README.md",
-    "USAGE.md",
-    "BUILD.md",
-    "MCP-SETUP.md",
-    "CONTRIBUTING.md",
-    "ACKNOWLEDGMENTS.md",
     "LICENSE"
-  ]
+  ],
+  "dependencies": {
+    "chalk": "^4.1.2"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  }
 }
