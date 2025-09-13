@@ -9,7 +9,7 @@ Spec-to-Code provides Claude Code with powerful slash commands that implement a 
 ### Installation
 
 ```bash
-npm install -g spec-to-code
+npm install -g @michaelborck/spec-to-code
 ```
 
 The commands will be automatically installed to your Claude Code during npm install.

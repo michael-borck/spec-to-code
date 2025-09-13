@@ -1,5 +1,5 @@
 {
-  "name": "spec-to-code",
+  "name": "@michaelborck/spec-to-code",
   "version": "1.0.0",
   "description": "Claude Code custom commands for systematic AI-assisted software development with 3-phase methodology (PRD → Tasks → Implementation)",
   "main": "install.js",
