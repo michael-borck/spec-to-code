@@ -1,5 +1,9 @@
 # 🚀 Spec-to-Code
 
+<!-- BADGES:START -->
+[![tool](https://img.shields.io/badge/-tool-607d8b?style=flat-square)](https://github.com/topics/tool) [![ai-assisted-development](https://img.shields.io/badge/-ai--assisted--development-blue?style=flat-square)](https://github.com/topics/ai-assisted-development) [![automation](https://img.shields.io/badge/-automation-blue?style=flat-square)](https://github.com/topics/automation) [![claude](https://img.shields.io/badge/-claude-blue?style=flat-square)](https://github.com/topics/claude) [![cli-tool](https://img.shields.io/badge/-cli--tool-blue?style=flat-square)](https://github.com/topics/cli-tool) [![code-generation](https://img.shields.io/badge/-code--generation-blue?style=flat-square)](https://github.com/topics/code-generation) [![javascript](https://img.shields.io/badge/-javascript-f7df1e?style=flat-square)](https://github.com/topics/javascript) [![nodejs](https://img.shields.io/badge/-nodejs-blue?style=flat-square)](https://github.com/topics/nodejs) [![prd](https://img.shields.io/badge/-prd-blue?style=flat-square)](https://github.com/topics/prd) [![software-development](https://img.shields.io/badge/-software--development-blue?style=flat-square)](https://github.com/topics/software-development)
+<!-- BADGES:END -->
+
 **Claude Code Custom Commands for Systematic AI-Assisted Software Development**
 
 Spec-to-Code provides Claude Code with powerful slash commands that implement a structured 3-phase methodology: **PRD Creation → Task Generation → Implementation**. Transform feature ideas into high-quality implementations with systematic guidance.
